@@ -1,3 +1,10 @@
 DirectoryIndex toppage.html
 
+# AccessControl referer
+SetEnvIf Referer "^http://norack1216\.fanbox\.cc\/" chk_url
+SetEnvIf Referer "^https://norack1216\.fanbox\.cc\/" chk_url
+
+order deny,allow
+deny from all
+allow from env=chk_url
 

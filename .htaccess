@@ -1,0 +1,8 @@
+# AccessControl referer
+SetEnvIf Referer "^http://umigen0331\.fanbox\.cc\/posts\/10515725" chk_url
+SetEnvIf Referer "^https://umigen0331\.fanbox\.cc\/posts\/10515725" chk_url
+
+order deny,allow
+deny from all
+allow from env=chk_url
+
